@@ -1,8 +1,8 @@
 ## uC/OS-II port for Microsemi RISC-V
 
 ### Test Platform and FPGA design:
-MPF300T-PolarFire-Eval-Kit
-[PolarFire Evaluation Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/MPF300T-PolarFire-Eval-Kit/tree/master/Modify_The_FPGA_Design/PF_CoreRISCV_AXI4_BaseDesign)    
+M2GL025-Creative-Board
+[M2GL025-Creative Board RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/M2GL025-Creative-Board/tree/master/Modify_The_FPGA_Design/CoreRISCV_AXI4_BaseDesign)    
 
 ### How to run the uC/OS-II RISC-V port:
 To know how to use the SoftConsole workspace, please refer the [Readme.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/ExampleWorkspace/README.md)
