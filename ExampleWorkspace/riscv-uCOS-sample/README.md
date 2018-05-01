@@ -52,6 +52,7 @@ You must configure the uCOS as per your applications need. Please read and modif
 
 E.g. You must use the processor clock and Memory size as per the Libero design that 
 you are using.
+
 The RISC-V creative board design uses 66Mhz processor clock. The PolarFire Eval Kit design uses 50Mhz processor clock. The SmartFusion2 Adv. Developement kit design uses 83Mhz processor clock.
    
 ### Microsemi SoftConsole Toolchain:
