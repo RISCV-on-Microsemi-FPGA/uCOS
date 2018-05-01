@@ -1,13 +1,12 @@
 /*******************************************************************************
- * (c) Copyright 2016-2017 Microsemi SoC Products Group.  All rights reserved.
+ * (c) Copyright 2016-2018 Microsemi SoC Products Group.  All rights reserved.
  *
  * @file init.c
  * @author Microsemi SoC Products Group
- * @brief RISC-V soft processor CoreRISCV_AXI4 memory section initializations
- *        and start-up code.
+ * @brief Mi-V soft processor memory section initializations and start-up code.
  *
- * SVN $Revision: 9014 $
- * SVN $Date: 2017-04-19 10:53:23 +0530 (Wed, 19 Apr 2017) $
+ * SVN $Revision: 9661 $
+ * SVN $Date: 2018-01-15 16:13:33 +0530 (Mon, 15 Jan 2018) $
  */
 
 #include <stdlib.h>
@@ -33,7 +32,7 @@ extern uint32_t     __sbss_end;
 extern uint32_t     __bss_start;
 extern uint32_t     __bss_end;
 
-void exit(int code);
+
 static void copy_section(uint32_t * p_load, uint32_t * p_vma, uint32_t * p_vma_end)
 {
     while(p_vma <= p_vma_end)
@@ -66,13 +65,15 @@ void _init(void)
     zero_section(&__sbss_start, &__sbss_end);
     zero_section(&__bss_start, &__bss_end);
     
-    exit(main(1, argv));
+    main(1, argv);
 }
 
-void exit(int code)
+/* Function called after main() finishes */
+void
+_fini()
 {
-	for(;;){}
 }
+
 #ifdef __cplusplus
 }
 #endif

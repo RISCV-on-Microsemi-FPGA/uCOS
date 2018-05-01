@@ -1,18 +1,18 @@
 /***************************************************************************//**
- * (c) Copyright 2007-2017 Microsemi SoC Products Group. All rights reserved.
+ * (c) Copyright 2007-2018 Microsemi SoC Products Group. All rights reserved.
  * 
  * Hardware registers access functions.
  * The implementation of these function is platform and toolchain specific.
  * The functions declared here are implemented using assembler as part of the 
  * processor/toolchain specific HAL.
  * 
- * SVN $Revision: 9085 $
- * SVN $Date: 2017-04-28 14:29:14 +0530 (Fri, 28 Apr 2017) $
+ * SVN $Revision: 9661 $
+ * SVN $Date: 2018-01-15 16:13:33 +0530 (Mon, 15 Jan 2018) $
  */
 #ifndef HW_REG_ACCESS
 #define HW_REG_ACCESS
 
-
+#include "cpu_types.h"
 /***************************************************************************//**
  * HW_set_32bit_reg is used to write the content of a 32 bits wide peripheral
  * register.
@@ -215,7 +215,7 @@ void HW_set_8bit_reg_field
  * @param mask      Bit mask to be applied to the raw register value to filter
  *                  out the other register fields values.
  *
- * @return          16 bits value containing the register field value specified
+ * @return          8 bits value containing the register field value specified
  *                  as parameter.
  */
 uint8_t HW_get_8bit_reg_field
