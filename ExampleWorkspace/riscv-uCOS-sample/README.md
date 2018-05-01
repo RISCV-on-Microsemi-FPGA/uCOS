@@ -1,16 +1,16 @@
 ## uC/OS-II port for Microsemi RISC-V
 
 ### Test Platform and FPGA design:
-This project is tested on foloowing hardware platforms:
+This project is tested on following hardware platforms:
 
 RISCV-Creative-Board
-[IGLOO2 Creative board Ni-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/RISC-V-Creative-Board/Programming_The_Target_Device/PROC_SUBSYSTEM_MIV_RV32IMA_BaseDesign)
+- [IGLOO2 Creative board Ni-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/RISC-V-Creative-Board/Programming_The_Target_Device/PROC_SUBSYSTEM_MIV_RV32IMA_BaseDesign)
 
 PolarFire-Eval-Kit
-[SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/Programming_The_Target_Device\MIV_RV32IMA_L1_AHB_BaseDesign)
+- [SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/Programming_The_Target_Device\MIV_RV32IMA_L1_AHB_BaseDesign)
 
 M2S150-Advanced-Dev-Kit
-[SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/M2S150-Advanced-Dev-Kit/Programming_The_Target_Device/PROC_SUBSYSTEM_BaseDesign)    
+- [SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/M2S150-Advanced-Dev-Kit/Programming_The_Target_Device/PROC_SUBSYSTEM_BaseDesign)    
 
 ### How to run the uC/OS-II RISC-V port:
 To know how to use the SoftConsole workspace, please refer the [Readme.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/README.md)
@@ -21,7 +21,7 @@ Top folders of riscv-uCOS-sample
 
 `drivers`: This folder contains DirectCore Soft IP CoreGPIO and CoreUARTapb drivers source code.
 
-`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code also downloadable from GitHub [RISCV-on-Microsemi-FPGA](https://github.com/RISCV-on-Microsemi-FPGA/riscv-hal)
+`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code can also be downloaded from [Mi-V-Firmware](https://github.com/RISCV-on-Microsemi-FPGA/Mi-V-Firmware)
 
 `Micrium`: uC/OS-II for RISC-V port source code
     
@@ -42,24 +42,20 @@ TeraTerm or PuTTY configured as follows:
         - no parity
         - no flow control
     
-The ./hw_platform.h file contains the design related information that is required 
-for this project. If you update the design, the hw_platform.h must be updated 
+The ./hw_platform.h file contains the FPGA design related information that is required 
+for this project. If you update the FPGA design, the hw_platform.h must be updated 
 accordingly.
     
 ### uCOS Configurations
 You must configure the uCOS as per your applications need. Please read and modify .\os_cfg.h,
 .\cpu_cfg.h and .\lib_cfg.h.
 
-E.g. You must use the clock value in hw_platform.h as per the Libero design that 
+E.g. You must use the processor clock and Memory size as per the Libero design that 
 you are using. 
-
-The RISC-V creative board design is running at 66Mhz clock.
-The PolarFire Eval Kit design is running at 50Mhz clock.
-The SmartFusion2 Adv. Developement kit design is running at 83Mhz clock.
-    
+   
 ### Microsemi SoftConsole Toolchain:
-To know more please refer: [SoftConsole](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole)
+To know more refer: [SoftConsole](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole)
 
 ### Documentation for Microsemi RISC-V processor, SoftConsole toochain, Debug Tools, FPGA design etc.
-To know more please refer: [Documentation](https://github.com/RISCV-on-Microsemi-FPGA/Documentation)
+To know more refer: [Documentation](https://github.com/RISCV-on-Microsemi-FPGA/Documentation)
     
