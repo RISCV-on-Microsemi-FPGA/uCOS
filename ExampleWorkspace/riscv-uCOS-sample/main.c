@@ -95,8 +95,11 @@ int  main (void)
     CPU_INT08U  os_err;
 #endif
 
-    UART_init( &g_uart, COREUARTAPB0_BASE_ADDR,
-    		BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY) );  /* Initialize uart for messages */
+    UART_init(&g_uart,
+              COREUARTAPB0_BASE_ADDR,
+              BAUD_VALUE_115200,
+              (DATA_8_BITS | NO_PARITY) );  /* Initialize uart for messages */
+              
     UART_send( &g_uart, g_message, sizeof(g_message) );
 
     BSP_OS_TickInit();                                          /* Initialize kernel tick timer                         */
@@ -113,10 +116,10 @@ int  main (void)
     OSTaskCreateExt( StartupTask,                               /* Create the startup task                              */
                      0,
                     &StartupTaskStk[APP_CFG_STARTUP_TASK_STK_SIZE - 1u],
-					 APP_CFG_STARTUP_TASK_PRIO,
-					 APP_CFG_STARTUP_TASK_PRIO,
+                    APP_CFG_STARTUP_TASK_PRIO,
+                    APP_CFG_STARTUP_TASK_PRIO,
                     &StartupTaskStk[0u],
-					 APP_CFG_STARTUP_TASK_STK_SIZE,
+                    APP_CFG_STARTUP_TASK_STK_SIZE,
                      0u,
                      (OS_TASK_OPT_STK_CHK | OS_TASK_OPT_STK_CLR));
 
@@ -172,8 +175,8 @@ static  void  StartupTask (void *p_arg)
     AppTaskCreate();
 
     while (DEF_TRUE) {                                          /* Task body, always written as an infinite loop.       */
-    	BSP_LED_Toggle(LED1_RED);
-    	BSP_LED_Toggle(LED1_GREEN);
+        BSP_LED_Toggle(LED1_RED);
+        BSP_LED_Toggle(LED1_GREEN);
         OSTimeDlyHMSM(0u, 0u, 1u, 0u);
         UART_polled_tx_string( &g_uart, (const uint8_t *)"StartupTask :\r\n" );
     }
@@ -182,24 +185,24 @@ static  void  StartupTask (void *p_arg)
 static void AppTaskCreate(void)
 {
 
-	INT8U os_err;
+    INT8U os_err;
 
     OSTaskCreateExt( AppTask1,                               /* Create the startup task                              */
                      0,
                     &AppTask1_Stk[APP_CFG_TASK_STK_SIZE - 1u],
-					 APP_CFG_TASK1_PRIO,
-					 APP_CFG_TASK1_PRIO,
+                    APP_CFG_TASK1_PRIO,
+                    APP_CFG_TASK1_PRIO,
                     &AppTask1_Stk[0u],
-					 APP_CFG_TASK_STK_SIZE,
+                    APP_CFG_TASK_STK_SIZE,
                      0u,
                     (OS_TASK_OPT_STK_CHK | OS_TASK_OPT_STK_CLR));
     OSTaskCreateExt( AppTask2,                               /* Create the startup task                              */
                      0,
                     &AppTask2_Stk[APP_CFG_TASK_STK_SIZE - 1u],
-					 APP_CFG_TASK2_PRIO,
-					 APP_CFG_TASK2_PRIO,
+                    APP_CFG_TASK2_PRIO,
+                    APP_CFG_TASK2_PRIO,
                     &AppTask2_Stk[0u],
-					 APP_CFG_TASK_STK_SIZE,
+                    APP_CFG_TASK_STK_SIZE,
                      0u,
                     (OS_TASK_OPT_STK_CHK | OS_TASK_OPT_STK_CLR));
 
@@ -221,8 +224,8 @@ static  void  AppTask1 (void *p_arg)
    while(DEF_TRUE)
    {
 
-	   UART_polled_tx_string( &g_uart, (const uint8_t *)"Task - 1\r\n" );
-	   OSTimeDly(1000);
+        UART_polled_tx_string( &g_uart, (const uint8_t *)"Task - 1\r\n" );
+        OSTimeDly(1000);
    }
 }
 /*********************************************************************************************************/
@@ -233,8 +236,8 @@ static  void  AppTask2 (void *p_arg)
 
    while(DEF_TRUE)
    {
-	   UART_polled_tx_string( &g_uart, (const uint8_t *)"Task - 2\r\n" );
-	   OSTimeDly(1000);
+        UART_polled_tx_string( &g_uart, (const uint8_t *)"Task - 2\r\n" );
+        OSTimeDly(1000);
    }
 }
 /*********************************************************************************************************/
