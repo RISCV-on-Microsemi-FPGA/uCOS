@@ -7,13 +7,14 @@ RISCV-Creative-Board
 - [RISC-V Creative board Mi-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/RISC-V-Creative-Board/tree/master/Programming_The_Target_Device/PROC_SUBSYSTEM_MIV_RV32IMA_BaseDesign)
 
 PolarFire-Eval-Kit
-- [PolarFire-Eval-Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Programming_The_Target_Device/MIV_RV32IMA_L1_AHB_BaseDesign)
+- [PolarFire Eval Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-Eval-Kit/tree/master/Programming_The_Target_Device/PF_MIV_RV32IMA_L1_AHB_BaseDesign)
 
-M2S150-Advanced-Dev-Kit
-- [SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/M2S150-Advanced-Dev-Kit/tree/master/Programming_The_Target_Device/PROC_SUBSYSTEM_BaseDesign)
+SmartFusion2-Advanced-Dev-Kit
+- [SmartFusion2 Advanced Development Kit RISC-V Sample Design](https://github.com/RISCV-on-Microsemi-FPGA/SmartFusion2-Advanced-Dev-Kit/tree/master/Programming_The_Target_Device/PROC_SUBSYSTEM_MIV_RV32IMA_BaseDesign)
+
 
 ### How to run the uC/OS-II RISC-V port:
-To know how to use the SoftConsole workspace, please refer the [Readme.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/README.md)
+To know how to use the SoftConsole project, please refer the [Readme.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/README.md)
 
 Top folders of riscv-uCOS-sample
 
@@ -21,7 +22,7 @@ Top folders of riscv-uCOS-sample
 
 `drivers`: This folder contains DirectCore Soft IP CoreGPIO and CoreUARTapb drivers source code.
 
-`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code can also be downloaded from [Mi-V-Firmware](https://github.com/RISCV-on-Microsemi-FPGA/Mi-V-Firmware)
+`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code can also be downloaded from [Firmware](https://github.com/RISCV-on-Microsemi-FPGA/Solutions/tree/master/Mi-V-Firmware)
 
 `Micrium`: uC/OS-II for RISC-V port source code
     
