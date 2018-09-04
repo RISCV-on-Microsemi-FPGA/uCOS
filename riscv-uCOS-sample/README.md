@@ -14,7 +14,7 @@ SmartFusion2-Advanced-Dev-Kit
 
 
 ### How to run the uC/OS-II RISC-V port:
-To know how to use the SoftConsole project, please refer the [Readme.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/README.md)
+For guidance on using the SoftConsole project, see SoftConsole/[README.md](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole/blob/master/README.md)
 
 Top folders of riscv-uCOS-sample
 
@@ -22,7 +22,7 @@ Top folders of riscv-uCOS-sample
 
 `drivers`: This folder contains DirectCore Soft IP CoreGPIO and CoreUARTapb drivers source code.
 
-`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code can also be downloaded from [Firmware](https://github.com/RISCV-on-Microsemi-FPGA/Solutions/tree/master/Mi-V-Firmware)
+`hal and riscv_hal`: This folder provides RISC-V soft processor hardware abstraction layer(RISC-V HAL) boot code, interrupt handling and hardware access methods for Mi-V soft processor. The source code can also be downloaded from the [Firmware Catalog](https://github.com/RISCV-on-Microsemi-FPGA/Solutions/tree/master/Mi-V-Firmware)
 
 `Micrium`: uC/OS-II for RISC-V port source code
     
